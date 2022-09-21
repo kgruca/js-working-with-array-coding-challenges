@@ -549,6 +549,19 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+const calcAverageHumanAgeChained = function(ages) {
+  const humanAgeAvg = ages
+    .map(age => age <= 2 ? age * 2 : age = 16 + 4 * age)
+    .filter(age => age > 18)
+    .reduce((acc, age, i, arr) => acc += age / arr.length, 0);
+  return humanAgeAvg;
+};
+
+console.log(calcAverageHumanAgeChained([5, 2, 4, 1, 15, 8, 3]));
+// logs 44
+console.log(calcAverageHumanAgeChained([16, 6, 10, 5, 6, 1, 4]));
+// logs 47.333333333333336
+
 /*
 const calcAverageHumanAge = ages =>
   ages
