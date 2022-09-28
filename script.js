@@ -804,11 +804,14 @@ dogs.forEach(dog => dog.recommendedFood = Math.floor((dog.weight
   ** 0.75 * 28)));
 
 // 2. 
-const sarahsDog = dogs.filter(dog => dog.owners.includes('Sarah'));
+const sarahsDog = dogs.find(dog => dog.owners.includes('Sarah'));
 console.log(sarahsDog);
+// logs 
 console.log(`Sarah's dog is eating too ${sarahsDog.curFood > 
 sarahsDog.recommendedFood ? 'much' : 'little'}`);
 // logs Sarah's dog is eating too little... why?
+
+// 3. 
 
 
 
