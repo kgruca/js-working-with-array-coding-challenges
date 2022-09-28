@@ -842,6 +842,11 @@ console.log(dogs.some(eatOkay));
 const dogsThatEatOK = dogs.filter(eatOkay);
 console.log(dogsThatEatOK);
 
+// 8.
+const recAscending = dogs.slice().sort((a, b) => a.recommendedFood 
+  - b.recommendedFood);
+console.log(recAscending);
+
 
 /*
 const dogs = [
