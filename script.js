@@ -812,8 +812,17 @@ sarahsDog.recommendedFood ? 'much' : 'little'}`);
 // logs Sarah's dog is eating too little... why?
 
 // 3. 
+const ownersEatTooMuch = dogs.filter(dog => dog.curFood > 
+  dog.recommendedFood).flatMap(dog => dog.owners);
 
+console.log(ownersEatTooMuch);
+// ['Matilda', 'Sarah', 'John']
+const ownersEatTooLittle = dogs.filter(dog => dog.curFood < 
+  dog.recommendedFood).flatMap(dog => dog.owners);
+// ['Alice', 'Bob', 'Michael']
+console.log(ownersEatTooLittle);
 
+//
 
 /*
 const dogs = [
