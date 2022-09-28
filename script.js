@@ -833,9 +833,14 @@ console.log(dogs.some(dog => dog.curFood === dog.recommendedFood));
 // logs false
 
 // 6.
-console.log(dogs.some(dog => dog.curFood <= dog.recommendedFood * 1.1 
-  && dog.curFood >= dog.recommendedFood * 0.9));
+const eatOkay = dog => dog.curFood <= dog.recommendedFood 
+  * 1.1 && dog.curFood >= dog.recommendedFood * 0.9;
+console.log(dogs.some(eatOkay));
 // logs true
+
+// 7.
+const dogsThatEatOK = dogs.filter(eatOkay);
+console.log(dogsThatEatOK);
 
 
 /*
