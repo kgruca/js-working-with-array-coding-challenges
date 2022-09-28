@@ -822,7 +822,11 @@ const ownersEatTooLittle = dogs.filter(dog => dog.curFood <
 // ['Alice', 'Bob', 'Michael']
 console.log(ownersEatTooLittle);
 
-//
+// 4.
+console.log(`${ownersEatTooMuch.join(' and ')}'s dogs eat too much!`);
+// logs Matilda and Sarah and John's dogs eat too much!
+console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat too little!`);
+// logs Alice and Bob and Michael's dogs eat too little!
 
 /*
 const dogs = [
